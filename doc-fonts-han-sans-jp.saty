@@ -1,0 +1,54 @@
+@require: stdjabook
+@require: lipsum/lipsum
+
+
+let inconsolata-block-text =
+  '<
+    +p{\lipsum(1);}
+    +p{\wagahai(1);}
+    +p{\wagahai(2);}
+  >
+
+let add-inline-fil ib = ib ++ inline-fil
+
+let-block ctx +show-font fontname =
+  let header-ctx =
+    ctx
+    |> set-font-size 14pt
+    |> set-paragraph-margin 30pt 0pt
+  in
+  let font-ctx =
+    ctx
+      |> set-font Latin          (fontname, 1.0, 0.0)
+      |> set-font Kana           (fontname, 0.88, 0.0)
+      |> set-font HanIdeographic (fontname, 0.88, 0.0)
+  in
+  let fontname-bb =
+    fontname
+    |> embed-string
+    |> read-inline header-ctx
+    |> add-inline-fil
+    |> line-break true true header-ctx
+  in
+  let example-bb =
+    inconsolata-block-text
+    |> read-block font-ctx
+  in
+  fontname-bb +++ example-bb
+
+in
+
+document (|
+  title = {\SATySFi;-fonts-han-sans-jp};
+  author = {Naoki Kaneko};
+  show-title = true;
+  show-toc = false;
+|) '<
+  +show-font(`fonts-han-sans-jp:HanSansJP-ExtraLight`);
+  +show-font(`fonts-han-sans-jp:HanSansJP-Light`);
+  +show-font(`fonts-han-sans-jp:HanSansJP-Normal`);
+  +show-font(`fonts-han-sans-jp:HanSansJP-Regular`);
+  +show-font(`fonts-han-sans-jp:HanSansJP-Medium`);
+  +show-font(`fonts-han-sans-jp:HanSansJP-Bold`);
+  +show-font(`fonts-han-sans-jp:HanSansJP-Heavy`);
+>

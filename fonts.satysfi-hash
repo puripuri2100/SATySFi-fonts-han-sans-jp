@@ -1,0 +1,9 @@
+{
+  "fonts-han-sans-jp:HanSansJP-ExtraLight" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-ExtraLight.otf"}>,
+  "fonts-han-sans-jp:HanSansJP-Light" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-Light.otf"}>,
+  "fonts-han-sans-jp:HanSansJP-Normal" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-Normal.otf"}>,
+  "fonts-han-sans-jp:HanSansJP-Regular" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-Regular.otf"}>,
+  "fonts-han-sans-jp:HanSansJP-Medium" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-Medium.otf"}>,
+  "fonts-han-sans-jp:HanSansJP-Bold" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-Bold.otf"}>,
+  "fonts-han-sans-jp:HanSansJP-Heavy" : <Single: {"src": "dist/fonts/fonts-han-sans-jp/SourceHanSansJP-Heavy.otf"}>
+}
